@@ -176,6 +176,7 @@ if(arguments.includes("showmcu")){
 async function startMCU() {
   const browser = await puppeteer.launch(
     {
+		ignoreDefaultArgs: ['--disable-extensions'],
       headless: isHeadless,
       args: ['--autoplay-policy=no-user-gesture-required']
     }
